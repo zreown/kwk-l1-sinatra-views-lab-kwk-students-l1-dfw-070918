@@ -10,7 +10,7 @@ describe App do
 		end
 
 		it 'renders a template called "hello.erb" ' do
-			expect(last_response.body).to include("<h1>Hello World</h1>")
+			expect(last_response.body).to eq(File.read("views/hello.erb"))
 		end
 	end	
 
@@ -24,7 +24,7 @@ describe App do
 		end
 
 		it 'renders a template called "goodbye.erb" ' do
-			expect(last_response.body).to include("<h1>Goodbye</h1>")
+			expect(last_response.body).to eq(File.read("views/goodbye.erb"))
 		end
 	end
 
@@ -38,7 +38,7 @@ describe App do
 		end
 
 		it 'renders a template called "dogs.erb" ' do
-			expect(last_response.body).to include("Dogs are Great!")
+			expect(last_response.body).to eq(File.read("views/dogs.erb"))
 		end
 	end
 
@@ -52,7 +52,7 @@ describe App do
 		end
 
 		it 'renders a template called "cats.erb" ' do
-			expect(last_response.body).to include("Cats are Great, Too!")
+			expect(last_response.body).to eq(File.read("views/cats.erb"))
 		end
 	end
 
@@ -66,7 +66,7 @@ describe App do
 		end
 
 		it 'renders a template called "music.erb" ' do
-			expect(last_response.body).to include("<h1>Music</h1>")
+			expect(last_response.body).to eq(File.read("views/music.erb"))
 		end
 
 		it 'includes a list of music' do
