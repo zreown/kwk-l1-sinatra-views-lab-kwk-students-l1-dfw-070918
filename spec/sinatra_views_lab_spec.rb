@@ -70,7 +70,7 @@ describe App do
 		end
 
 		it 'includes a list of music' do
-			expect(last_response.body).to include("<ul></ul>")
+			expect(last_response.body).to include("<ul>")
 		end
 	end		
 end
