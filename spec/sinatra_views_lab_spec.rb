@@ -1,4 +1,4 @@
-describe App do 
+describe App do
 
 	describe 'GET /hello' do
 		before do
@@ -10,9 +10,9 @@ describe App do
 		end
 
 		it 'renders a template called "hello.erb" ' do
-			expect(last_response.body).to eq(File.read("views/hello.erb"))
+				expect(last_response.body).to eq(File.read("views/hello.erb"))
 		end
-	end	
+	end
 
 	describe 'GET /goodbye' do
 		before do
@@ -70,7 +70,11 @@ describe App do
 		end
 
 		it 'includes a list of music' do
-			expect(last_response.body).to include("<ul>")
+			if last_response.status == 200
+				expect(last_response.body).to include("<ul>")
+			elsif last_response.status = 404
+				fail "Your application is not responding to GET /music. Did you create that route?"
+			end
 		end
-	end		
+	end
 end

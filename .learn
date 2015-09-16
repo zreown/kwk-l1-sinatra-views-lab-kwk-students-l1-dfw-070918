@@ -1,5 +1,7 @@
 tags:
-  - tag1
+  - sinatra
+  - views
+  - erb
 languages:
-  - language1
+  - ruby
 resources: 0
