@@ -24,7 +24,7 @@ describe App do
 		end
 
 		it 'renders a template called "goodbye.erb" ' do
-			expect(last_response.body).to eq(File.read("views/goodbye.erb"))
+			expect(last_response.body).to include("Goodbye Joe")
 		end
 	end
 
