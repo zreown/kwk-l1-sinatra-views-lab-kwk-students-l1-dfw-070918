@@ -10,11 +10,11 @@ describe App do
 		end
 
 		it 'renders a template called "hello.erb" ' do
-				expect(last_response.body).to eq(File.read("views/hello.erb"))
+			expect(last_response.body).to eq(File.read("views/hello.erb"))
 		end
 	end
 
-describe 'GET /goodbye' do
+	describe 'GET /goodbye' do
 		before do
 			get '/goodbye'
 		end
