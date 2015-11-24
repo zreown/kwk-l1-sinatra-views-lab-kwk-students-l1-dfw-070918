@@ -19,16 +19,7 @@ You can run `learn` to get the tests passing and see errors.
 
 1. Create a template called `hello.erb` in `views` that contains an `h1` tag with the content `Hello World`. This should get rendered via a GET `/hello` route by your `App` controller in `app.rb`.
 
-2. Create another template called `goodbye.erb` in `views` that contains an `h1` tag with the content `Goodbye`. This should get rendered via a GET `/goodbye` route by your `App` controller in `app.rb`.
+2. Create another template called `goodbye.erb` in `views`. In this view, use ERB tags to create a variable `name`. This variable should store the name `Joe`. Then, using ERB tags, say "Goodbye Joe" in an `h1` tag. This should get rendered via a GET `/goodbye` route by your `App` controller in `app.rb`.
 
-3. Create two templates in `views` - `dogs.erb` and `cats.erb`. Both are rendered via GET `/dogs` and `/cats`, respectively. Make sure that `dogs.erb` contains the text `Dogs are Great!` and `cats.erb` contains the text `Cats are Great, Too!`
-
-4. Create a template called `music.erb` in `views` that gets rendered via GET `/music`. It should contain an `h1` with the content `Music` and an unordered list (`ul`) of some of your favorite music, artists, or genres within `<li>`s. The `views/music.erb` template should contain HTML that would render something similar in structure to:
-
-```
-Music
-
-· Future Islands - Seasons (Waiting for you)
-· Chemical Brothers - Hey Boy, Hey Girl
-· Neutral Milk Hotel - In an Aeroplane Over the Sea
-```
+3. Create a template called `date.erb` in `views` that gets rendered via GET `/today`. It should contain an `h1` with the content `Today` 
+Using ERB tags, and the DateTime library, display today's date in a `p` tag. The date should be formatted to look something like this `The date is Wednesday, November 18, 2015`.

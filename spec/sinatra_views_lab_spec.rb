@@ -10,7 +10,7 @@ describe App do
 		end
 
 		it 'renders a template called "hello.erb" ' do
-				expect(last_response.body).to eq(File.read("views/hello.erb"))
+			expect(last_response.body).to eq(File.read("views/hello.erb"))
 		end
 	end
 
@@ -24,57 +24,29 @@ describe App do
 		end
 
 		it 'renders a template called "goodbye.erb" ' do
-			expect(last_response.body).to eq(File.read("views/goodbye.erb"))
+			expect(last_response.body).to include("Goodbye Joe")
 		end
 	end
-
-	describe 'GET /dogs' do
+	describe 'GET /date' do
 		before do
-			get '/dogs'
+			get '/date'
 		end
 
 		it 'sends a 200 status code' do
 			expect(last_response.status).to eq(200)
 		end
 
-		it 'renders a template called "dogs.erb" ' do
-			expect(last_response.body).to eq(File.read("views/dogs.erb"))
-		end
-	end
-
-	describe 'GET /cats' do
-		before do
-			get '/cats'
+		it 'renders a template called "date.erb" ' do
+			expect(last_response.body).to include("The date is")
 		end
 
-		it 'sends a 200 status code' do
-			expect(last_response.status).to eq(200)
-		end
-
-		it 'renders a template called "cats.erb" ' do
-			expect(last_response.body).to eq(File.read("views/cats.erb"))
-		end
-	end
-
-	describe 'GET /music' do
-		before do
-			get '/music'
-		end
-
-		it 'sends a 200 status code' do
-			expect(last_response.status).to eq(200)
-		end
-
-		it 'renders a template called "music.erb" ' do
-			expect(last_response.body).to eq(File.read("views/music.erb"))
-		end
-
-		it 'includes a list of music' do
+		it 'includes the current date and time' do
 			if last_response.status == 200
-				expect(last_response.body).to include("<ul>")
+				expect(last_response.body).to include(Date.today.strftime("%A, %B %d, %Y"))
 			elsif last_response.status = 404
-				fail "Your application is not responding to GET /music. Did you create that route?"
+				fail "Your application is not responding to GET /date. Did you create that route?"
 			end
 		end
 	end
 end
+
