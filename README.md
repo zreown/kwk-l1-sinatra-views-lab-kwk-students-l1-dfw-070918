@@ -23,3 +23,5 @@ You can run `learn` to get the tests passing and see errors.
 
 3. Create a template called `date.erb` in `views` that gets rendered via GET `/today`. It should contain an `h1` with the content `Today` 
 Using ERB tags, and the DateTime library, display today's date in a `p` tag. The date should be formatted to look something like this `The date is Wednesday, November 18, 2015`.
+
+<a href='https://learn.co/lessons/sinatra-views-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
