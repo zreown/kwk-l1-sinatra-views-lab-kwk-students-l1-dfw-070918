@@ -13,7 +13,7 @@ This lesson practices creating ERB views and rendering them from a Sinatra Actio
 
 For each of the following examples, create a .erb file in the `views` directory and a route in `app.rb` which renders that template. Make sure each template contains the requested content.
 
-Run `shotgun` to start a local server so that you can test your app in your browser. Once your application is running, assuming port 9393, the shotgun default, you should be able to hit the following local urls: http://localhost:9393/hello , http://localhost:9393/goodbye , http://localhost:9393/dogs , http://localhost:9393/cats , and http://localhost:9393/music
+Run `shotgun` to start a local server so that you can test your app in your browser. Once your application is running, assuming port 9393, the shotgun default, you should be able to hit the following local urls: http://localhost:9393/hello , http://localhost:9393/goodbye , and http://localhost:9393/date.
 
 You can run `learn` to get the tests passing and see errors.
 
@@ -25,3 +25,5 @@ You can run `learn` to get the tests passing and see errors.
 Using ERB tags, and the DateTime library, display today's date in a `p` tag. The date should be formatted to look something like this `The date is Wednesday, November 18, 2015`.
 
 <a href='https://learn.co/lessons/sinatra-views-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-views-lab'>Sinatra Views Lab II</a> on Learn.co and start learning to code for free.</p>
