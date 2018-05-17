@@ -37,7 +37,8 @@ You can run `learn` to get the tests passing and see errors.
 3. Create a template called `date.erb` in `views` that gets rendered via GET
    `/date`. It should contain an `h1` with the content `Today`
 
-Using ERB tags, and the [DateTime library](http://ruby-doc.org/stdlib-2.3.1/libdoc/date/rdoc/DateTime.html),
+Using ERB tags, and the [DateTime
+library](http://ruby-doc.org/stdlib-2.3.1/libdoc/date/rdoc/DateTime.html),
 display today's date in a `p` tag. The date should be formatted to look
 something like this `The date is Wednesday, November 18, 2015`.
 
